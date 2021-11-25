@@ -1,12 +1,26 @@
-<div class="container p-5">
-  <h1>The List Page</h1>
+<nav class="navbar navbar-light bg-light">
+  <form class="container-fluid justify-content-end">
+    <%= link_to 'Create a new list', new_list_path, class: 'btn btn-outline-success'%>
+  </form>
+</nav>
 
+<div class="banner text-center d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1><strong>Movies My Bru<strong></h1>
+  </div>
+</div>
+
+
+
+<div class="container-fluid p-5 align-items-center">
+
+  <h3>My Lists</h3>
   <ul>
     <% @lists.each do |list| %>
       <li><%= link_to list.name, list_path(list) %></li>
     <% end %>
   </ul>
 
-  <%= link_to 'Create a new list', new_list_path %>
+  <%= link_to 'Create a new list', new_list_path, class: 'btn btn-outline-info'%>
 
 </div>
