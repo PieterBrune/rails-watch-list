@@ -20,9 +20,9 @@
         <div class="card-body">
             <h5 class="card-title"><%= bookmark.movie.title %> <span class="text-muted">• <%= bookmark.movie.rating %></span>⭐</h5>
             <p class="card-text text-secondary"><%= bookmark.movie.overview %></p>
-            <div class="d-flex justify-content-between">
+            <div class="comment-delete d-flex align-items-center justify-content-between">
               <p class="card-text fw-bolder"><span class="fs-4">"</span><%= bookmark.comment %></p>
-              <p><%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
+              <p><%= link_to 'Delete', bookmark_path(bookmark), class: 'btn btn-outline-danger', method: :delete, data: { confirm: "Are you sure?" } %></p>
             </div>
         </div>
       </div>
